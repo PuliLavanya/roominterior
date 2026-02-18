@@ -1,0 +1,86 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #0d1018;
+}
+
+#scene {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.hud {
+  position: fixed;
+  inset: 1rem auto auto 1rem;
+  width: min(420px, calc(100vw - 2rem));
+  z-index: 5;
+  background: rgb(12 16 24 / 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.hud h1 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+
+.hud p,
+.hud li {
+  color: #c6d0e6;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.hud ul {
+  margin: 0.5rem 0;
+  padding-inline-start: 1rem;
+}
+
+#status {
+  margin-top: 0.55rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.82rem;
+  background: rgb(90 138 255 / 0.16);
+  color: #d8e5ff;
+}
+
+.legend {
+  margin-top: 0.65rem;
+  font-size: 0.78rem;
+  color: #b7c3df;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 0.45rem;
+}
+
+.dot.floor {
+  background: #5d8dff;
+}
+
+.dot.blocked {
+  background: #ff6161;
+}
+
+.dot.wall {
+  background: #65d8a3;
+}
