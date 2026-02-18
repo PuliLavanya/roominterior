@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Room Interior AR Placement Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="hud">
+      <h1>IKEA-Style AR Placement Simulator</h1>
+      <p>
+        Drag the furniture with your mouse. The object snaps to detected horizontal
+        surfaces, aligns with walls within 10&nbsp;cm, rejects invalid overlaps,
+        and uses depth occlusion.
+      </p>
+      <ul>
+        <li><strong>Left drag:</strong> move furniture</li>
+        <li><strong>R:</strong> rotate 15°</li>
+        <li><strong>C:</strong> toggle camera orbit</li>
+      </ul>
+      <div id="status" aria-live="polite">Initializing…</div>
+      <div class="legend">
+        <div><span class="dot floor"></span>Detected surfaces</div>
+        <div><span class="dot blocked"></span>Blocked/occupied surfaces</div>
+        <div><span class="dot wall"></span>Detected walls</div>
+      </div>
+    </aside>
+    <canvas id="scene"></canvas>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
